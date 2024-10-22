@@ -7,7 +7,8 @@ body {
     padding: 0;
     background-color: #121212;
     color: white;
-    overflow: visible; /* Ensure that overflowing content is visible */
+    overflow: visible;
+    padding-top: 110px; /* 60px banner + 50px audio player */
 }
 
 /* Top banner */
@@ -16,13 +17,15 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    height: 60px;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Align elements on the ends */
+    justify-content: space-between;
     z-index: 100;
+    box-sizing: border-box;
 }
 
 /* Containers for alignment */
@@ -41,13 +44,13 @@ body {
 #twitterButton img {
     width: 30px;
     height: 30px;
-    filter: invert(100%); /* Invert the icon color for dark backgrounds */
+    filter: invert(100%);
     transition: filter 0.3s;
 }
 
 #telegramButton img:hover,
 #twitterButton img:hover {
-    filter: invert(50%); /* Hover effect */
+    filter: invert(50%);
 }
 
 /* Copy button */
@@ -100,14 +103,14 @@ body {
 
 /* Audio player */
 .audio-control {
-    display: block;
-    margin: 80px auto 20px auto;
     background: rgba(255, 255, 255, 0.1);
     border: none;
     color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    z-index: 50;
+    padding: 10px 0;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 /* Main content */
@@ -125,7 +128,7 @@ body {
     width: 80%;
     max-width: 800px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 20px;
     text-align: center;
     position: relative;
     z-index: 10;
@@ -216,11 +219,11 @@ h1.typing-effect {
 
 /* Styles for floating icons */
 img.floating-icon {
-    position: fixed; /* Positioned relative to the window */
-    width: 50px; /* Adjust size as needed */
+    position: fixed;
+    width: 50px;
     height: 50px;
     pointer-events: none;
-    z-index: 1000; /* Above other elements */
+    z-index: 1000;
 }
 
 /* 10 Commandments section */
@@ -253,4 +256,44 @@ img.floating-icon {
 .commandments-section li:before {
     content: "";
     margin-right: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    #banner {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: auto;
+    }
+    .left-items,
+    .right-items {
+        flex: 1 1 100%;
+        justify-content: center;
+        margin: 5px 0;
+    }
+    #code {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    /* Adjust audio player position */
+    .audio-control {
+        margin-bottom: 20px;
+    }
+    body {
+        padding-top: 130px; /* 60px banner + 70px audio player */
+    }
+    /* Ensure copy and language buttons stay on the first line */
+    .right-items {
+        flex: 0 0 auto;
+    }
+    .left-items,
+    #code {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+    /* Hide floating icons on small screens */
+    img.floating-icon {
+        display: none;
+    }
 }

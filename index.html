@@ -3,74 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>The Book of Solana</title>
-    <!-- Meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Cinzel Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&display=swap" rel="stylesheet">
-    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Top Banner -->
     <div id="banner">
-        <!-- Left-aligned Elements -->
         <div class="left-items">
-            <!-- Telegram Button -->
             <a href="https://t.me/BOSOL_CTO" target="_blank" id="telegramButton">
                 <img src="images/telegram-icon.png" alt="Telegram">
             </a>
-
-            <!-- Twitter Link -->
             <a href="https://twitter.com/The_BookOfSol" target="_blank" id="twitterButton">
                 <img src="images/twitter-icon.png" alt="Twitter">
             </a>
         </div>
-
-        <!-- Centered Element -->
         <span id="code">7GN2ckJh9wdUcKKWJTW8QTkTa2nrc4RgeqxDTHgYpump</span>
-
-        <!-- Right-aligned Elements -->
         <div class="right-items">
             <button id="copyButton">
                 <img id="copyIcon" src="images/copy-icon.png" alt="Copy">
             </button>
-            <!-- Language Selection Button -->
             <button id="languageButton" class="language-select">EN/中文</button>
         </div>
     </div>
 
-    <!-- Audio Player -->
-    <audio id="backgroundMusic" controls autoplay loop class="audio-control">
-        <!-- The source will be updated dynamically -->
-        <source src="story_en.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <!-- Main Content -->
     <div class="parallax">
         <div class="content">
+            <audio id="backgroundMusic" controls autoplay loop class="audio-control">
+                <source src="Story_en.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
             <h1 class="typing-effect">The Book of Solana</h1>
             <div id="chapterContainer">
                 <h2 class="float" id="chapterTitle"></h2>
                 <p id="chapterText"></p>
             </div>
             <button id="nextChapter" class="next-chapter">Next Chapter</button>
-            <!-- Dexscreener Embed -->
             <div id="dexscreener-embed">
                 <iframe src="https://dexscreener.com/solana/GCzB2tHixei8rmxTQ9AnX7fn6a47A31CXcWwqu1pUiUq?embed=1&theme=dark"></iframe>
             </div>
         </div>
     </div>
 
-    <!-- 10 Commandments Section -->
     <div class="commandments-section">
         <h2 id="commandmentsTitle">The 10 Commandments of $BOSOL</h2>
         <ol id="commandmentsList">
-            <!-- Commandments will be inserted here via JavaScript -->
         </ol>
     </div>
 
-    <!-- JavaScript Scripts -->
     <script src="chapters.js"></script>
     <script src="script.js"></script>
 </body>
