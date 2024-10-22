@@ -1,0 +1,256 @@
+/* styles.css */
+
+/* General styles */
+body {
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+    overflow: visible; /* Ensure that overflowing content is visible */
+}
+
+/* Top banner */
+#banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align elements on the ends */
+    z-index: 100;
+}
+
+/* Containers for alignment */
+.left-items,
+.right-items {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for Telegram and Twitter buttons */
+.left-items a {
+    margin-right: 10px;
+}
+
+#telegramButton img,
+#twitterButton img {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%); /* Invert the icon color for dark backgrounds */
+    transition: filter 0.3s;
+}
+
+#telegramButton img:hover,
+#twitterButton img:hover {
+    filter: invert(50%); /* Hover effect */
+}
+
+/* Copy button */
+#copyButton {
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+#copyButton:hover {
+    background-color: #666;
+}
+
+#copyIcon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Language selection button */
+.language-select {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.language-select:hover {
+    background-color: #666;
+}
+
+/* Adjust margins for elements on the right */
+.right-items button {
+    margin-left: 10px;
+}
+
+/* Center the code */
+#code {
+    text-align: center;
+    font-size: 1em;
+}
+
+/* Audio player */
+.audio-control {
+    display: block;
+    margin: 80px auto 20px auto;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 50;
+}
+
+/* Main content */
+.parallax {
+    background-image: url('https://images6.alphacoders.com/681/681657.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    height: auto;
+    position: relative;
+    padding: 20px 0;
+    z-index: 1;
+}
+
+.content {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* Main title */
+h1.typing-effect {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Chapters container */
+#chapterContainer {
+    margin: 20px auto;
+    width: 90%;
+}
+
+/* "Next Chapter" button */
+.next-chapter {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-size: 1.2em;
+}
+
+.next-chapter:hover {
+    background-color: #666;
+}
+
+/* Dexscreener embed */
+#dexscreener-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 50%;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+#dexscreener-embed iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Floating effect for title */
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Page-turning effect */
+#pageTurn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    animation: page-turn 1s forwards;
+    z-index: 999;
+}
+
+@keyframes page-turn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Styles for floating icons */
+img.floating-icon {
+    position: fixed; /* Positioned relative to the window */
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    pointer-events: none;
+    z-index: 1000; /* Above other elements */
+}
+
+/* 10 Commandments section */
+.commandments-section {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+.commandments-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: 'Cinzel', serif;
+}
+
+.commandments-section ol {
+    list-style-position: inside;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.commandments-section li {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.commandments-section li:before {
+    content: "";
+    margin-right: 10px;
+}
