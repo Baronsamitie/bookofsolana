@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const backgroundMusic = document.getElementById("backgroundMusic");
         backgroundMusic.pause(); // Stop the current music
         if (currentLanguage === 'en') {
-            backgroundMusic.src = "Story_en.mp3";
+            backgroundMusic.src = "story_en.mp3";
         } else {
             backgroundMusic.src = "story_zh.mp3";
         }
